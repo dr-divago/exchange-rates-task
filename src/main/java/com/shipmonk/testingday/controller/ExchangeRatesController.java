@@ -26,10 +26,10 @@ public class ExchangeRatesController
     @RequestMapping(method = RequestMethod.GET, path = "/{day}")
     public ResponseEntity<ResponseRate> getRates(@PathVariable("day") String day)
     {
-        ResponseRate ratesMono = rateExchangeService.getExchangeData(day, accessKey);
+        ResponseRate rate = rateExchangeService.getExchangeData(day, accessKey);
 
-        return ratesMono != null
-            ? new ResponseEntity<>(ratesMono, HttpStatus.OK)
+        return rate != null
+            ? new ResponseEntity<>(rate, HttpStatus.OK)
             : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 }

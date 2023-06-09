@@ -38,9 +38,7 @@ public class RateExchangeService {
 
     private ResponseEntity mapResponseToEntity(ResponseRate responseRate) {
         ResponseEntity entity = new ResponseEntity();
-        entity.setSuccess(responseRate.success());
         entity.setTimestamp(responseRate.timestamp());
-        entity.setHistorical(responseRate.historical());
         entity.setBase(responseRate.base());
         entity.setDate(responseRate.date());
         return entity;

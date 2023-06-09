@@ -23,7 +23,6 @@ public class FixerApiClient implements ExchangeRate {
 
 
     public ResponseRate getExchangeRates(String date, String accessKey) {
-
         //get data from service
         try {
             ResponseRate responseRate = webClient.get()
